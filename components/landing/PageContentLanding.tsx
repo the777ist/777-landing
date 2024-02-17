@@ -136,6 +136,22 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
 
   return (
     <div className={styles.pageContentLanding}>
+      {/* Pre-fetch images */}
+      {Object.values(images).map((imageArray, index) =>
+        imageArray.slice(0, 3).map((imageUrl, i) => (
+          <div key={index + "-" + i} style={{ opacity: 0, zIndex: "-99999" }}>
+            <Image
+              src={imageUrl}
+              alt={`Pre-fetch image ${i}`}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              quality={isMobile ? 30 : 50}
+              priority={true}
+            />
+          </div>
+        ))
+      )}
       <div className={`${styles.contentContainerLanding} ${styles.first}`}>
         <div className={styles.carousel}>
           <div className={`${styles.carouselImage} ${isFading ? styles.fadeOut : styles.fadeIn} ${styles.carouselImageFirst}`}>
