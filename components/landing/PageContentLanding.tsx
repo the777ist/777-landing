@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useMemo, useState } from "react";
 import styles from "./PageContentLanding.module.css";
 import Image from "next/legacy/image";
+import { useAtom } from "jotai";
+import { isMobileAtom } from "@/store/atoms";
 
 interface PageContentLandingProps {
 };
@@ -10,6 +12,7 @@ type Active = "blog" | "events" | "music" | "artists" | "venues" | "default";
 const PageContentLanding: React.FC<PageContentLandingProps> = () => {
   const [active, setActive] = useState<Active>("default");
   const [transform, setTransform] = useState(0);
+  const [isMobile] = useAtom(isMobileAtom);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -142,7 +145,7 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
-              quality={50}
+              quality={isMobile ? 30 : 50}
               priority={true}
             />
           </div>
@@ -153,7 +156,7 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
-              quality={50}
+              quality={isMobile ? 30 : 50}
               priority={true}
             />
           </div>
