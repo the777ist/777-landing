@@ -143,6 +143,7 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
               objectFit="cover"
               objectPosition="center"
               quality={50}
+              priority={true}
             />
           </div>
           <div className={`${styles.carouselImage} ${isFading ? styles.fadeOut : styles.fadeIn} ${styles.carouselImageSecond}`}>
@@ -153,6 +154,7 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
               objectFit="cover"
               objectPosition="center"
               quality={50}
+              priority={true}
             />
           </div>
         </div>
@@ -169,48 +171,6 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
         <div className={`${styles.navText} ${active === "artists" ? styles.navTextActive : ""}`} onClick={() => setActive("artists")}>Artists</div>
         <div className={`${styles.navText} ${active === "venues" ? styles.navTextActive : ""}`} onClick={() => setActive("venues")}>Venues</div>
       </div>
-
-      {/* Pre-fetch images */}
-      {Object.values(images).map((imageArray, index) => {
-        return (
-          <div style={{ display: "none" }} key={index}>
-            <Image
-              src={imageArray[0]}
-              alt={`Preload image ${index}-0`}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-              quality={50}
-              priority={true}
-              style={{ display: "none" }}
-            />
-            {imageArray[1] && (
-              <Image
-                src={imageArray[1]}
-                alt={`Preload image ${index}-1`}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-                quality={50}
-                priority={true}
-                style={{ display: "none" }}
-              />
-            )}
-            {imageArray[2] && (
-              <Image
-                src={imageArray[2]}
-                alt={`Preload image ${index}-2`}
-                layout="fill"
-                objectFit="cover"
-                objectPosition="center"
-                quality={50}
-                priority={true}
-                style={{ display: "none" }}
-              />
-            )}
-          </div>
-        );
-      })}
     </div>
   );
 };
