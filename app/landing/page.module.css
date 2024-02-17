@@ -1,0 +1,16 @@
+.landingHome {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - var(--header-height) - var(--footer-desktop-height));
+  min-height: calc(100vh - var(--header-height) - var(--footer-desktop-height));
+  max-height: calc(100vh - var(--header-height) - var(--footer-desktop-height));
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  .landingHome { 
+    height: calc(100vh - var(--header-height) - var(--footer-mobile-landscape-height));
+    min-height: calc(100vh - var(--header-height) - var(--footer-mobile-landscape-height));
+    max-height: calc(100vh - var(--header-height) - var(--footer-mobile-landscape-height));
+  }
+}

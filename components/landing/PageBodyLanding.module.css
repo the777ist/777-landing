@@ -1,0 +1,19 @@
+.pageBodyLanding {
+  margin: 0;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: var(--header-height);
+  height: calc(100% - var(--header-height) - var(--footer-desktop-height));
+  min-height: calc(100% - var(--header-height) - var(--footer-desktop-height));
+  max-height: calc(100% - var(--header-height) - var(--footer-desktop-height));
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  .pageBodyLanding {
+    height: calc(100% - var(--header-height) - var(--footer-mobile-landscape-height));
+    min-height: calc(100% - var(--header-height) - var(--footer-mobile-landscape-height));
+    max-height: calc(100% - var(--header-height) - var(--footer-mobile-landscape-height));
+  }
+}

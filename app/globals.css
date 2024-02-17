@@ -1,0 +1,157 @@
+:root {
+  --main-color: #0b0b0b;
+  --card-color: #121212;
+  --card-2-color: #222222;
+  --footer-color: #151515;
+  --button-not-focus-color: #7e7e7e;
+  --header-height: 10vh;
+  --text-primary-color: #F0F0F0;
+  --text-secondary-color: #7E7E7E;
+  
+  /* Desktop & Base Styles */
+  --menu-primary-desktop-height: 10vh;
+  --menu-secondary-desktop-height: 5vh;
+  --footer-desktop-height: 8.25vh;
+  --nav-header-desktop-font-size: 2.25rem;
+  --heading-desktop-font-size: 1.25rem;
+  --heading-2-desktop-font-size: 1rem;
+  --heading-3-desktop-font-size: 0.75rem;
+  --heading-4-desktop-font-size: 0.65rem;
+  --desktop-padding: 1.5rem;
+  --scrollitem-blog-desktop-width: 22.5rem;
+  --image-postid-desktop-width: 40vw;
+  --scrollitem-events-desktop-width: 32.5rem;
+  --image-container-events-desktop-ratio: 0.75;
+  --content-container-events-desktop-ratio: 0.25;
+  --scrollitem-tickets-desktop-width: 16.5rem;
+  --details-container-eventid-desktop-ratio: 0.65;
+  --content-container-eventid-desktop-ratio: 0.35;
+  --image-container-eventid-desktop-ratio: 0.5;
+  --info-container-eventid-desktop-ratio: 0.5;
+  --details-container-profileid-desktop-ratio: 0.3;
+  --content-container-profileid-desktop-ratio: 0.7;
+  --scrollitem-profileid-desktop-width: 32.5rem;
+  --image-items-container-profileid-desktop-ratio: 0.6;
+  --genres-about-container-profileid-desktop-ratio: 0.4;
+  --music-card-desktop-width: 27rem;
+  --music-card-desktop-height: calc(calc(calc(100vh - var(--header-height) - var(--menu-primary-desktop-height)) / 4) - var(--desktop-padding));
+  --image-container-music-desktop-ratio: 0.2;
+
+  /* Tablet */
+  --details-container-profileid-tablet-ratio: 0.45;
+  --content-container-profileid-tablet-ratio: 0.55;
+  --image-container-music-tablet-ratio: 0.3;
+
+  /* Mobile Landscape*/
+  --footer-mobile-landscape-height: 10.25vh;
+  --nav-header-mobile-landscape-font-size: 1.5rem;
+  --heading-mobile-landscape-font-size: 1rem;
+  --heading-2-mobile-landscape-font-size: 0.8rem;
+  --heading-3-mobile-landscape-font-size: 0.6rem;
+  --heading-4-mobile-landscape-font-size: 0.45rem;
+  --scrollitem-blog-mobile-landscape-width: 18.5rem;
+  --details-container-eventid-mobile-landscape-ratio: 0.6;
+  --content-container-eventid-mobile-landscape-ratio: 0.4;
+  --details-container-profileid-mobile-landscape-ratio: 0.4;
+  --content-container-profileid-mobile-landscape-ratio: 0.6;
+  --scrollitem-profileid-mobile-landscape-width: 25.5rem;
+  --music-card-mobile-landscape-width: 40vw;
+  --music-card-mobile-landscape-height: calc(calc(calc(100vh - var(--header-height) - var(--menu-primary-desktop-height)) / 3) - var(--mobile-padding));
+  --image-container-music-mobile-landscape-ratio: 0.25;
+
+  /* Mobile Portrait */
+  --menu-primary-mobile-portrait-height: 6vh;
+  --mobile-padding: 1rem;
+  --scrollitem-blog-mobile-portrait-width: 100vw;
+  --image-postid-mobile-portrait-height: 30vh;
+  --scrollitem-events-mobile-portrait-width: 100vw;
+  --details-container-eventid-mobile-portrait-ratio: 0.7;
+  --content-container-eventid-mobile-portrait-ratio: 0.3;
+  --details-container-profileid-mobile-portrait-ratio: 0.3;
+  --content-container-profileid-mobile-portrait-ratio: 0.7;
+  --scrollitem-profileid-mobile-portrait-width: 100vw;
+  --music-card-mobile-portrait-width: 100vw;
+  --music-card-mobile-portrait-height: calc(calc(calc(100vh - var(--header-height) - var(--menu-primary-mobile-portrait-height)) / 5) - var(--mobile-padding));
+  --image-container-music-mobile-portrait-ratio: 0.6;
+}
+
+html, body, #__next {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  color: var(--text-primary-color);
+  max-height: 100vh;
+}
+
+@font-face {
+  font-family: "Orion Prime";
+  src: url("/fonts/Orion Prime Demo.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Orion Prime Inline";
+  src: url("/fonts/Orion Prime Inline.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/fonts/Figtree Variable.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "GT America Expanded";
+  src: url("/fonts/GT America Expanded Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "GT America Expanded";
+  src: url("/fonts/GT America Expanded Black Italic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "GT America Expanded";
+  src: url("/fonts/GT America Expanded Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "GT America Expanded";
+  src: url("/fonts/GT America Expanded Bold Italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "GT America Expanded";
+  src: url("/fonts/GT America Expanded Regular Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "GT America Expanded";
+  src: url("/fonts/GT America Expanded Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}

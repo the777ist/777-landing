@@ -1,0 +1,145 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.menu {
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
+  background: rgba(0, 0, 0, 0.70);
+  backdrop-filter: blur(30px);
+  animation: fadeIn 0.25s ease-in-out;
+  padding: var(--desktop-padding);
+}
+
+.navText {
+  font-family: "Orion Prime Inline", sans-serif;
+  font-size: calc(var(--nav-header-desktop-font-size) * 1.15);
+  margin-top: calc(var(--desktop-padding));
+  margin-bottom: calc(var(--desktop-padding));
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.80);
+  cursor: pointer;
+}
+
+.ctaContainerTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--desktop-padding));
+  background-color:var(--text-primary-color);
+  cursor: pointer;
+}
+
+.item {
+  text-transform: uppercase;
+  font-family: "GT America Expanded", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: var(--heading-desktop-font-size);
+  z-index: 1020;
+  color: var(--text-primary-color);
+}
+
+.item.title {
+  padding-left: var(--desktop-padding);
+  padding-right: var(--desktop-padding);
+  color: var(--main-color);
+}
+
+.item.subText {
+  padding: var(--desktop-padding);
+  padding-top: calc(var(--desktop-padding) * 4);
+  color: var(--text-primary-color);
+}
+
+.item.text {
+  padding: var(--desktop-padding);
+  padding-top: calc(var(--desktop-padding) / 2);
+  color: var(--text-primary-color);
+  font-family: "GT America Expanded", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: uppercase; 
+  text-align: center;
+  cursor: pointer;
+}
+
+.content {
+  font-family: "Figtree", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--heading-2-desktop-font-size);
+  margin-top: calc(var(--desktop-padding) * 4);
+  margin-bottom: var(--desktop-padding);
+}
+
+.content.disclaimer {
+  text-align: center;
+  font-size: var(--heading-3-desktop-font-size);
+  margin-bottom: 0; 
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  .item {
+    font-size: var(--heading-3-mobile-landscape-font-size);
+  }
+
+  .item.subText {
+    padding: var(--mobile-padding);
+    padding-top: calc(var(--mobile-padding) * 2);
+  }
+
+  .item.text {
+    padding: var(--mobile-padding);
+    padding-top: 0;
+  }
+
+  .content {
+    font-family: "Figtree", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--heading-2-mobile-landscape-font-size);
+    margin-top: calc(var(--mobile-padding));
+    margin-bottom: 0;
+  }
+  
+  .content.disclaimer {
+    margin-top: calc(var(--mobile-padding) * 2);
+    font-size: calc(var(--heading-3-mobile-landscape-font-size) / 1.25);
+  }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 666px) {
+  .item {
+    font-size: var(--heading-3-desktop-font-size);
+  }
+
+  .item.subText {
+    padding: var(--mobile-padding);
+    padding-top: calc(var(--mobile-padding) * 4);
+  }
+  
+  .content.disclaimer {
+    font-size: calc(var(--heading-3-desktop-font-size) / 1.25);
+  }
+}

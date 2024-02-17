@@ -1,0 +1,106 @@
+.header {
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1010;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Orion Prime", sans-serif;
+  font-size: var(--nav-header-desktop-font-size);
+  margin-left: var(--desktop-padding);
+  cursor: pointer;
+}
+
+.menuLogo {
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.80);
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: var(--text-primary-color);
+  cursor: pointer;
+}
+
+.textContainerInverted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.text {
+  font-family: "GT America Expanded", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase; 
+  line-height: 1.5;
+  text-align: center;
+  font-size: var(--heading-desktop-font-size);
+  margin-left: var(--desktop-padding);
+  margin-right: var(--desktop-padding);
+  color: var(--main-color);
+}
+
+.textInverted {
+  font-family: "GT America Expanded", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase; 
+  line-height: 1.5;
+  text-align: center;
+  font-size: var(--heading-desktop-font-size);
+  margin-left: var(--desktop-padding);
+  margin-right: var(--desktop-padding);
+  color: var(--text-primary-color);
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.80);
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  .logo {
+    font-size: var(--nav-header-mobile-landscape-font-size);
+    margin-left: var(--mobile-padding);
+  }
+  .text {
+    line-height: normal;
+    font-size: var(--heading-3-desktop-font-size);
+    margin-left: var(--mobile-padding);
+    margin-right: var(--mobile-padding);
+  }
+
+  .textInverted {
+    line-height: normal;
+    font-size: var(--heading-3-desktop-font-size);
+    margin-left: var(--mobile-padding);
+    margin-right: var(--mobile-padding);
+  }
+}
+
+/* Mobile Portrait */
+@media screen and (max-width: 666px) {
+  .text {
+    line-height: normal;
+    font-size: var(--heading-3-desktop-font-size);
+    margin-left: var(--mobile-padding);
+    margin-right: var(--mobile-padding);
+  }
+
+  .textInverted {
+    line-height: normal;
+    font-size: var(--heading-3-desktop-font-size);
+    margin-left: var(--mobile-padding);
+    margin-right: var(--mobile-padding);
+  }
+
+  .logo {
+    margin-left: var(--mobile-padding);
+  }
+}

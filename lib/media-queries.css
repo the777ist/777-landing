@@ -1,0 +1,11 @@
+/* Laptop */
+@media screen and (max-width: 1439px) {}
+
+/* Tablet */
+@media screen and (max-width: 1025px), screen and (max-width: 940px) and (orientation: portrait) {}
+
+/* Mobile Landscape */
+@media screen and (max-width: 940px) and (orientation: landscape) {}
+
+/* Mobile Portrait */
+@media screen and (max-width: 666px) {}

@@ -1,0 +1,29 @@
+.footer {
+  height: var(--footer-desktop-height);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center; 
+  background-color: var(--footer-color);
+}
+
+.logoFooter {
+  position: fixed;
+  height: var(--footer-desktop-height);
+  width: var(--footer-desktop-height);
+  cursor: pointer;
+}
+
+/* Mobile Landscape */
+@media screen and (max-width: 940px) and (orientation: landscape) {
+  .footer {
+    height: var(--footer-mobile-landscape-height);
+  }
+  
+  .logoFooter {
+    height: var(--footer-mobile-landscape-height);
+    width: var(--footer-mobile-landscape-height);
+  }
+}
