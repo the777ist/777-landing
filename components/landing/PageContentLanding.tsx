@@ -66,7 +66,9 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Blog/3.jpg",
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Blog/4.jpg",
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Blog/5.jpg",
-      "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Blog/6.jpg"
+      "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Blog/6.jpg",
+      "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Blog/7.jpg",
+      "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Blog/8.jpg"
     ],
     events: [
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Events/1.jpg",
@@ -75,6 +77,8 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Events/4.jpg",
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Events/5.jpg",
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Events/6.jpg",
+      "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Events/7.jpg",
+      "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Events/8.jpg",
     ],
     music: [
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Music/1.jpg",
@@ -103,6 +107,8 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Profiles/Venues/4.jpg",
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Profiles/Venues/5.jpg",
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Profiles/Venues/6.jpg",
+      "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Profiles/Venues/7.jpg",
+      "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Profiles/Venues/8.jpg",
     ],
     default: [
       "https://fggmassppfayioprzeer.supabase.co/storage/v1/object/public/landing/Default/1.png",
@@ -162,7 +168,7 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
               objectFit="cover"
               objectPosition="center"
               quality={isMobile ? 30 : 50}
-              priority={true}
+              priority={false}
             />
           </div>
           <div className={`${styles.carouselImage} ${isFading ? styles.fadeOut : styles.fadeIn} ${styles.carouselImageSecond}`}>
