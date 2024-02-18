@@ -192,31 +192,31 @@ const PageContentLanding: React.FC<PageContentLandingProps> = () => {
       <div ref={containerRef} className={`${styles.contentContainerLanding} ${styles.second}`}>
         <div className={`${styles.navText} ${active === "blog" ? styles.navTextActive : ""}`} onClick={() => {
           setActive("blog");
-          setCurrentImageIndex(0)
+          setCurrentImageIndex(Math.floor(Math.random() * 8));
         }}>
           Blog
         </div>
         <div className={`${styles.navText} ${active === "events" ? styles.navTextActive : ""}`} onClick={() => {
           setActive("events");
-          setCurrentImageIndex(0)
+          setCurrentImageIndex(Math.floor(Math.random() * 8));
         }}>
           Events
         </div>
         <div className={`${styles.navText} ${active === "music" ? styles.navTextActive : ""}`} onClick={() => {
           setActive("music");
-          setCurrentImageIndex(0)
+          setCurrentImageIndex(Math.floor(Math.random() * 8));
         }}>
           Music
         </div>
         <div className={`${styles.navText} ${active === "artists" ? styles.navTextActive : ""}`} onClick={() => {
           setActive("artists");
-          setCurrentImageIndex(0)
+          setCurrentImageIndex(Math.floor(Math.random() * 8));
         }}>
           Artists
         </div>
         <div className={`${styles.navText} ${active === "venues" ? styles.navTextActive : ""}`} onClick={() => {
           setActive("venues");
-          setCurrentImageIndex(0)
+          setCurrentImageIndex(Math.floor(Math.random() * 8));
         }}>
           Venues
         </div>
